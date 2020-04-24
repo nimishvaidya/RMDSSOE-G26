@@ -20,14 +20,13 @@ from sklearn import metrics
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-if __name__ == '__main__':
-    app.run(debug = True)
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-src = os.path.join(BASE_DIR, 'processed_data_new.csv')
-data = pd.read_csv(src)
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+#src = os.path.join(BASE_DIR, 'processed_data_new.csv')
+#data = pd.read_csv(src)
+data = pd.read_csv("processed_data_new.csv")
 
     
 def get_life_expectancy(age):
@@ -78,3 +77,6 @@ def interact_life_expectancy():
 
 
     return render_template('time.html',string_to_print = string_to_print)
+
+if __name__ == '__main__':
+    app.run(debug = True)
