@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, send_file, make_response, send_from_directory, redirect
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -13,10 +13,11 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
+import webbrowser
 #%matplotlib inline
 
 
-    
+ 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
@@ -28,7 +29,6 @@ app.config["DEBUG"] = True
 #data = pd.read_csv(src)
 data = pd.read_csv("processed_data_new.csv")
 
-    
 def get_life_expectancy(age):
     #data = pd.read_excel("C:/Users/rutuj/Desktop/BE_Project/processed_data_new.xlsx")
     #data.head()
@@ -46,6 +46,20 @@ def get_life_expectancy(age):
     y_pred1 = regressor.predict(pd1)
     return y_pred1
 
+
+@app.route('/pre_processing_G26')
+def view_pre():
+    return send_file('templates/pre_processing_G26.pdf')
+@app.route('/latex_report_G26')
+def view_report():
+    return send_file('templates/latex_report_G26.pdf')
+@app.route('/published_work_G26')
+def view_published():
+    return send_file('templates/published_work_G26.pdf')
+
+@app.route('/add_data')
+def view_add_data():
+    return render_template('add_data.html')
 
 @app.route('/', methods=['POST', 'GET'])
 def interact_life_expectancy():
@@ -78,5 +92,8 @@ def interact_life_expectancy():
 
     return render_template('time.html',string_to_print = string_to_print)
 
-if __name__ == '__main__':
-    app.run(debug = True)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
