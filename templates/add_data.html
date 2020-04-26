@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-
-body {
+    <style>
+   
+    body {
     background-color: #dae1e7;
 }
+
 
 .card {
     margin-top: 4rem;
@@ -28,12 +29,16 @@ h1{
 
 
 }
+
+   
+   
+   
     </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/static/images/favicon.png" >
 
 
     <!--<link rel="stylesheet" href="main.css">-->
@@ -46,7 +51,7 @@ h1{
         <h1>House Price Prediction</h1>
     </div>
    
-    <div class="card" col-md-10  m5>
+    <div class="card" >
         <div class="card-header" >
           <h4>House Sale Entry</h4>
           </div>
@@ -54,58 +59,58 @@ h1{
     <form  action="https://formspree.io/meqrjqgr"
     method="POST">
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-12 col-form-label">Price</label>
-          <div class="col-md-8  col-xs-12 col-sm-12">
+          <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Price</label>
+          <div class="col-lg-8  col-xs-12 col-sm-12">
             <input type="number" class="form-control" id="inputEmail3" name="Price" >
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-12 col-form-label">Area (in sq ft.)</label>
-          <div class="col-md-8 col-xs-12 col-sm-12">
+          <label for="inputPassword3" class="col-sm-12 col-lg-2 col-form-label">Area (in sq ft.)</label>
+          <div class="col-lg-8 col-xs-12 col-sm-12">
             <input type="number" class="form-control" id="inputPassword3" name="Area (in sq ft.)">
           </div>
         </div>
 
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Bedrooms</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Bedrooms</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="number" class="form-control" id="inputEmail3" name="Bedrooms">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Bathrooms</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Bathrooms</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="number" class="form-control" id="inputEmail3" name="Bathrooms">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Number of Floors</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Number of Floors</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="number" class="form-control" id="inputEmail3"name="Number of Floors">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Year Build</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Year Build</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="month" class="form-control" id="inputEmail3" name="Year Build">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Purchase Date</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Purchase Date</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="date" class="form-control" id="inputEmail3" name="Purchase Date">
             </div>
           </div>
 
         <fieldset class="form-group">
           <div class="row">
-            <legend class="col-form-label col-sm-12 pt-0">Water Front</legend>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <legend class="col-form-label col-sm-12 col-lg-2 pt-0">Water Front</legend>
+            <div class="col-lg-8 col-xs-12 col-sm-12 col-lg-2">
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="Water Front" id="gridRadios1" value="Yes" checked>
                 <label class="form-check-label" for="gridRadios1">
@@ -123,14 +128,16 @@ h1{
         </fieldset>
 
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-12 col-form-label">Zip Code</label>
-            <div class="col-md-8 col-xs-12 col-sm-12">
+            <label for="inputEmail3" class="col-sm-12 col-lg-2 col-form-label">Zip Code</label>
+            <div class="col-lg-8 col-xs-12 col-sm-12">
               <input type="number" class="form-control" id="inputEmail3" name="Zip Code">
             </div>
           </div>
        
         <div class="form-group row">
-          <div class="col-md-8 col-xs-12 col-sm-12" style="text-align:center">
+          <div class="col-lg-8 col-xs-12 col-sm-12 col-lg-2" style="text-align:center">
+
+
             <button type="submit" class="btn  btn-lg btn-warning">Submit</button>
 
           </div>
@@ -146,3 +153,14 @@ h1{
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
